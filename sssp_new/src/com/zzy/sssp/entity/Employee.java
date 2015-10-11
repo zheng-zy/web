@@ -12,6 +12,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 /**
  * Employee.java 说明
  * 
@@ -25,6 +27,7 @@ public class Employee {
 	private String lastName;
 
 	private String email;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date birth;
 
 	private Date createTime;
